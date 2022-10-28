@@ -6,7 +6,8 @@ cursor = connection.get_cursor(connession)
 
 cursor.execute(
         """
-        SELECT * FROM film
+        SELECT title
+        FROM `sakila`.`film`;
        
         """
         )
