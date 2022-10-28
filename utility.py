@@ -53,12 +53,28 @@ class ConnectionUtil:
         for row in records:
             print(row)        
 
-    def getActorById(self):
 
-        idnumber = input("inserisci un numero: ")
+    def getFilmByTitle(self):
+
         self.cursor.execute(
             """
-            SELECT 
+            SELECT title
+            FROM `sakila`.`film`;
+           
+            """
+            )
+        records = self.cursor.fetchall()
+        for row in records:
+            print(row)       
+
+
+    def getFilmByDirectors(self):
+
+        self.cursor.execute(
+            """
+            SELECT title
+            FROM `sakila`.`film`;
+           
             """
             )
         records = self.cursor.fetchall()
